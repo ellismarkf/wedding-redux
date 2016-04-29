@@ -9,7 +9,7 @@ gulp.task('less', () => {
 		.pipe(less({
 			paths: [ path.join(__dirname, 'style', 'includes') ]
 		}))
-		.pipe(gulp.dest('./style.css'))
+		.pipe(gulp.dest(__dirname))
 		.pipe(reload({ stream: true }))
 })
 
