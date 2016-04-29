@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Crete+Round:400,400italic|Cookie);
+@import './constants.less';
+
+body {
+	background-color: @light-cream;
+	font-size: 1rem;
+}
+
+h1 {
+	font-family: 'Cookie', cursive;
+	font-size: 5rem;
+	color: @gold;
+}
+
+.palette-box(@color) {
+	width: 75px;
+	height: 100px;
+	margin: 0 auto;
+	background-color: @color;
+	display: inline-block;
+}
+
+.palette-box-light-cream {
+	.palette-box(@light-cream)
+}
+
+.palette-box-faded-cream {
+	.palette-box(@faded-cream)
+}
+
+.palette-box-cream {
+	.palette-box(@cream)
+}
+
+.palette-box-light-gold {
+	.palette-box(@light-gold)
+}
+
+.palette-box-gold {
+	.palette-box(@gold)
+}
+
+.palette-box-light-rose-gold {
+	.palette-box(@light-rose-gold)
+}
+
+.palette-box-rose-gold {
+	.palette-box(@rose-gold)
+}
+
+.palette-box-light-rose {
+	.palette-box(@light-rose)
+}
+.palette-box-rose {
+	.palette-box(@rose)
+}
