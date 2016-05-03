@@ -5,7 +5,7 @@ var browserSync = require('browser-sync')
 var reload = browserSync.reload
 
 gulp.task('less', () => {
-	return gulp.src('./style/**/*.less')
+	return gulp.src('./style/index.less')
 		.pipe(less({
 			paths: [ path.join(__dirname, 'style', 'includes') ]
 		}))
