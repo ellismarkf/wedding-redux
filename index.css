@@ -1,73 +1,186 @@
-@import url(https://fonts.googleapis.com/css?family=Crete+Round:400,400italic|Cookie);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,900|Euphoria+Script|Playfair+Display+SC:400,700,400italic);
 body {
   background-color: #FCFCF7;
   font-size: 1rem;
 }
-h1 {
-  font-family: 'Cookie', cursive;
-  font-size: 5rem;
-  color: #DEC773;
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 1;
+  background-color: #FCFCF7;
+  border-bottom: 2px solid #FA8078;
+}
+nav ul {
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+nav ul li {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 11px;
+}
+.placeholder:after {
+  content: '\2665';
+  position: relative;
+  left: 50px;
+}
+nav ul li a {
+  margin: 11px 50px;
+  font-family: 'Playfair Display SC', serif;
+  font-weight: 300;
+  text-decoration: none;
+  color: #FAA899;
+  text-transform: uppercase;
+  font-size: .7rem;
+  position: relative;
+  font-style: italic;
+}
+nav ul li a:hover {
+  color: #FA8078;
+}
+.home-link h1 {
+  font-family: 'Euphoria Script', cursive;
+  font-size: 2.2rem;
+  text-transform: none;
+  color: #FA8078;
+  text-align: center;
+  position: relative;
+  top: -36px;
+  display: inline-block;
+}
+.home-link h1:after {
+  content: '';
+  height: 5rem;
+  width: 15rem;
+  position: absolute;
+  background-color: #FCFCF7;
+  margin-left: -193px;
+  margin-top: -17px;
+  border-radius: 100%;
+  box-shadow: 0px 3px 0px -1px #FA8078;
+  z-index: -1;
+}
+.home-link span {
+  font-family: 'Playfair Display SC', serif;
+  color: #FAA899;
+  font-style: italic;
+  margin-right: -4px;
+}
+img {
+  max-width: 100%;
+}
+section {
+  height: 500px;
 }
 .palette-box-light-cream {
-  width: 75px;
-  height: 100px;
+  width: 10%;
+  height: 10px;
   margin: 0 auto;
   background-color: #FCFCF7;
   display: inline-block;
 }
 .palette-box-faded-cream {
-  width: 75px;
-  height: 100px;
+  width: 10%;
+  height: 10px;
   margin: 0 auto;
   background-color: #F7F5E3;
   display: inline-block;
 }
 .palette-box-cream {
-  width: 75px;
-  height: 100px;
+  width: 10%;
+  height: 10px;
   margin: 0 auto;
   background-color: #F0EDC9;
   display: inline-block;
 }
 .palette-box-light-gold {
-  width: 75px;
-  height: 100px;
+  width: 10%;
+  height: 10px;
   margin: 0 auto;
   background-color: #E6D491;
   display: inline-block;
 }
 .palette-box-gold {
-  width: 75px;
-  height: 100px;
+  width: 10%;
+  height: 10px;
   margin: 0 auto;
   background-color: #DEC773;
   display: inline-block;
 }
 .palette-box-light-rose-gold {
-  width: 75px;
-  height: 100px;
+  width: 10%;
+  height: 10px;
   margin: 0 auto;
   background-color: #FCE3D6;
   display: inline-block;
 }
 .palette-box-rose-gold {
-  width: 75px;
-  height: 100px;
+  width: 10%;
+  height: 10px;
   margin: 0 auto;
   background-color: #FCCCB0;
   display: inline-block;
 }
 .palette-box-light-rose {
-  width: 75px;
-  height: 100px;
+  width: 10%;
+  height: 10px;
   margin: 0 auto;
   background-color: #FAA899;
   display: inline-block;
 }
 .palette-box-rose {
-  width: 75px;
-  height: 100px;
+  width: 10%;
+  height: 10px;
   margin: 0 auto;
   background-color: #FA8078;
   display: inline-block;
+}
+.palette-box-dark-rose {
+  width: 10%;
+  height: 10px;
+  margin: 0 auto;
+  background-color: #E1675F;
+  display: inline-block;
+}
+footer {
+  position: fixed;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+}
+@media screen and (max-width: 840px) {
+  nav ul li a {
+    display: none;
+  }
+  .home-link {
+    display: inline-block;
+  }
+  .home-link h1 {
+    font-family: 'Euphoria Script', cursive;
+    font-size: 1.5rem;
+    text-transform: none;
+    color: #FA8078;
+    text-align: center;
+    position: relative;
+    top: -30px;
+    display: inline-block;
+  }
+  .home-link h1:after {
+    content: '';
+    height: 5rem;
+    width: 12rem;
+    position: absolute;
+    background-color: #FCFCF7;
+    margin-left: -150px;
+    margin-top: -30px;
+    border-radius: 100%;
+    box-shadow: 0px 3px 0px -1px #FA8078;
+    z-index: -1;
+  }
 }

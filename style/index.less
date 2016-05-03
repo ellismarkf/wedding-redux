@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Crete+Round:400,400italic|Cookie);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,900|Euphoria+Script|Playfair+Display+SC:400,700,400italic);
 @import './constants.less';
 
 body {
@@ -6,15 +6,95 @@ body {
 	font-size: 1rem;
 }
 
-h1 {
-	font-family: 'Cookie', cursive;
-	font-size: 5rem;
-	color: @gold;
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	z-index: 1;
+	background-color: @light-cream;
+	border-bottom: 2px solid @rose;
 }
 
+nav ul {
+	text-align: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+nav ul li {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 11px;
+}
+
+.placeholder:after {
+	content: '\2665';
+	position: relative;
+	left: 50px;
+}
+
+nav ul li a {
+	margin: 11px 50px;
+	position: relative;
+	font-family: 'Playfair Display SC', serif;
+	font-weight: 300;
+	text-decoration: none;
+	color: @light-rose;
+	text-transform: uppercase;
+	font-size: .7rem;
+	position: relative;
+	font-style: italic;
+}
+
+nav ul li a:hover {
+	color: @rose;
+}
+
+.home-link h1 {
+	font-family: 'Euphoria Script', cursive;
+	font-size: 2.2rem;
+	text-transform: none;
+	color: @rose;
+	text-align: center;
+	position: relative;
+	top: -36px;
+	display: inline-block;
+}
+
+.home-link h1:after {
+	content: '';
+	height: 5rem;
+	width: 15rem;
+	position: absolute;
+	background-color: @light-cream;
+	margin-left: -193px;
+	margin-top: -17px;
+	border-radius: 100%;
+	box-shadow: 0px 3px 0px -1px @rose;
+	z-index: -1;
+}
+
+.home-link span {
+	font-family: 'Playfair Display SC', serif;
+	color: @light-rose;
+	font-style: italic;
+	margin-right: -4px;
+}
+
+img {
+	max-width: 100%;
+}
+
+section {
+	height: 500px;
+}
 .palette-box(@color) {
-	width: 75px;
-	height: 100px;
+	width: 10%;
+	height: 10px;
 	margin: 0 auto;
 	background-color: @color;
 	display: inline-block;
@@ -53,4 +133,46 @@ h1 {
 }
 .palette-box-rose {
 	.palette-box(@rose)
+}
+.palette-box-dark-rose {
+	.palette-box(@dark-rose)
+}
+
+footer {
+	position: fixed;
+	bottom: -4px;
+	left: 0;
+	width: 100%;
+}
+
+@media screen and (max-width: 840px) {
+	nav ul li a {
+		display: none;
+	}
+	.home-link {
+		display: inline-block;
+	}
+	.home-link h1 {
+		font-family: 'Euphoria Script', cursive;
+		font-size: 1.5rem;
+		text-transform: none;
+		color: @rose;
+		text-align: center;
+		position: relative;
+		top: -30px;
+		display: inline-block;
+	}
+
+	.home-link h1:after {
+		content: '';
+		height: 5rem;
+		width: 12rem;
+		position: absolute;
+		background-color: @light-cream;
+		margin-left: -150px;
+		margin-top: -30px;
+		border-radius: 100%;
+		box-shadow: 0px 3px 0px -1px @rose;
+		z-index: -1;
+	}
 }
