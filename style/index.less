@@ -35,6 +35,16 @@ nav ul li {
 	content: '\2665';
 	position: relative;
 	left: 50px;
+	color: @rose;
+}
+
+.placeholder:hover:after {
+	content: '\2665';
+	position: relative;
+	left: 50px;
+	&:hover {
+		cursor: default;
+	}
 }
 
 nav ul li a {
@@ -44,7 +54,7 @@ nav ul li a {
 	font-weight: 300;
 	text-decoration: none;
 	color: @light-rose;
-	text-transform: uppercase;
+	text-transform: lowercase;
 	font-size: .7rem;
 	position: relative;
 	font-style: italic;
@@ -89,9 +99,63 @@ img {
 	max-width: 100%;
 }
 
+.callout {
+	font-family: 'Playfair Display SC', serif;
+	font-style: italic;
+	font-size: 5rem;
+	margin-top: -91px;
+	color: @light-cream;
+	text-align: right;
+}
+
 section {
 	height: 500px;
 }
+
+section h1 {
+	text-align: right;
+	font-family: 'Euphoria Script', cursive;
+	color: @dark-rose;
+	font-size: 5rem;
+	border-bottom: 1px solid @light-rose;
+	width: 50%;
+}
+
+section h1:after {
+	content: '\2767';
+	padding-left: 15px;
+	font-size: 2rem;
+	color: @light-rose;
+}
+
+section h1:before {
+	content: '\2619';
+	font-size: 2rem;
+	padding-right: 15px;
+	color: @light-rose;
+}
+
+section h4 {
+	text-align: left;
+	font-family: 'Euphoria Script', cursive;
+	color: @dark-rose;
+	font-size: 5rem;
+	border-bottom: 1px solid @light-rose;
+	width: 50%;
+	float: right;
+	span {
+		font-size: 1.8rem;
+		color: @light-rose;
+	}
+}
+
+section h2 {
+	text-align: center;
+	color: @light-rose;
+	font-size: 2rem;
+}
+
+
 .palette-box(@color) {
 	width: 10%;
 	height: 10px;
@@ -171,6 +235,31 @@ footer {
 		background-color: @light-cream;
 		margin-left: -150px;
 		margin-top: -30px;
+		border-radius: 100%;
+		box-shadow: 0px 3px 0px -1px @rose;
+		z-index: -1;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.home-link h1 {
+		font-family: 'Euphoria Script', cursive;
+		font-size: 1.3rem;
+		text-transform: none;
+		color: @rose;
+		text-align: center;
+		position: relative;
+		top: -32px;
+		display: inline-block;
+	}
+	.home-link h1:after {
+		content: '';
+		height: 4rem;
+		width: 9rem;
+		position: absolute;
+		background-color: @light-cream;
+		margin-left: -117px;
+		margin-top: -16px;
 		border-radius: 100%;
 		box-shadow: 0px 3px 0px -1px @rose;
 		z-index: -1;

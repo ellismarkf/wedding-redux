@@ -29,6 +29,15 @@ nav ul li {
   content: '\2665';
   position: relative;
   left: 50px;
+  color: #FA8078;
+}
+.placeholder:hover:after {
+  content: '\2665';
+  position: relative;
+  left: 50px;
+}
+.placeholder:hover:after:hover {
+  cursor: default;
 }
 nav ul li a {
   margin: 11px 50px;
@@ -36,7 +45,7 @@ nav ul li a {
   font-weight: 300;
   text-decoration: none;
   color: #FAA899;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-size: .7rem;
   position: relative;
   font-style: italic;
@@ -75,8 +84,54 @@ nav ul li a:hover {
 img {
   max-width: 100%;
 }
+.callout {
+  font-family: 'Playfair Display SC', serif;
+  font-style: italic;
+  font-size: 5rem;
+  margin-top: -91px;
+  color: #FCFCF7;
+  text-align: right;
+}
 section {
   height: 500px;
+}
+section h1 {
+  text-align: right;
+  font-family: 'Euphoria Script', cursive;
+  color: #E1675F;
+  font-size: 5rem;
+  border-bottom: 1px solid #FAA899;
+  width: 50%;
+}
+section h1:after {
+  content: '\2767';
+  padding-left: 15px;
+  font-size: 2rem;
+  color: #FAA899;
+}
+section h1:before {
+  content: '\2619';
+  font-size: 2rem;
+  padding-right: 15px;
+  color: #FAA899;
+}
+section h4 {
+  text-align: left;
+  font-family: 'Euphoria Script', cursive;
+  color: #E1675F;
+  font-size: 5rem;
+  border-bottom: 1px solid #FAA899;
+  width: 50%;
+  float: right;
+}
+section h4 span {
+  font-size: 1.8rem;
+  color: #FAA899;
+}
+section h2 {
+  text-align: center;
+  color: #FAA899;
+  font-size: 2rem;
 }
 .palette-box-light-cream {
   width: 10%;
@@ -179,6 +234,30 @@ footer {
     background-color: #FCFCF7;
     margin-left: -150px;
     margin-top: -30px;
+    border-radius: 100%;
+    box-shadow: 0px 3px 0px -1px #FA8078;
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 450px) {
+  .home-link h1 {
+    font-family: 'Euphoria Script', cursive;
+    font-size: 1.3rem;
+    text-transform: none;
+    color: #FA8078;
+    text-align: center;
+    position: relative;
+    top: -32px;
+    display: inline-block;
+  }
+  .home-link h1:after {
+    content: '';
+    height: 4rem;
+    width: 9rem;
+    position: absolute;
+    background-color: #FCFCF7;
+    margin-left: -117px;
+    margin-top: -16px;
     border-radius: 100%;
     box-shadow: 0px 3px 0px -1px #FA8078;
     z-index: -1;
