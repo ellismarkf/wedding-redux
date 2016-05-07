@@ -1,10 +1,16 @@
 import React from 'react'
+import { defineMessages, FormattedMessage } from 'react-intl'
+import MajorEventEntry from './MajorEventEntry'
+
+const messages = defineMessages({
+	overview: {
+		id: 'timeline.major-entry.overview'
+	}
+})
 
 const Timeline = () => (
 	<section className="timeline">
-		<div className="major-event-entry">
-			<h2><strong>T</strong>hree years ago, fate and inscrutable family connections brought Mark and Lisandra together for what amounted to a few hours over the course of a week.  Their story unfolded across years and continents, and now they're getting married!  This is a map of their story.</h2>
-		</div>
+		<MajorEventEntry message={ messages.overview }/>
 		<div className="timeline-entry">
 			<div className="story-content lisy">
 				<p>she was working a summer internship at MD Anderson</p>

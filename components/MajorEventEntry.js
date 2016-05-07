@@ -1,9 +1,20 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
 
-const MajorEventEntry = () =>  {
+const MajorEventEntry = ({ message }) =>  {
 	return (
 		<div className="major-event-entry">
-			<h2><strong>T</strong>hree years ago, fate and inscrutable family connections brought Mark and Lisandra together for what amounted to a few hours over the course of a week.  Their story unfolded across years and continents, and now they're getting married!  This is a map of their story.</h2>
+			<FormattedMessage {...message}>
+				{ ( value ) => {
+					console.log(value)
+					const firstLetter = value[0]
+					const rest = value.substr(1)
+					return (
+						<h2><strong>{firstLetter}</strong>{rest}</h2>	
+					)	
+				}}
+			</FormattedMessage>
+			<FormattedMessage {...message} />
 		</div>
 	)
 }
