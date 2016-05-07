@@ -1,137 +1,138 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,900|Euphoria+Script|Playfair+Display+SC:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Euphoria+Script|Playfair+Display:400,400italic,700,700italic,900,900italic|Vollkorn:400italic,400|Playfair+Display+SC:400,400italic,700,700italic,900,900italic);
 body {
   background-color: #FCFCF7;
   font-size: 1rem;
+  font-family: 'Vollkorn', serif;
+  font-weight: 400;
+  color: #706044;
+  background-image: url(http://wowmarkandray.com/img/topogrpahy2-01.png);
 }
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 40px;
-  z-index: 1;
-  background-color: #FCFCF7;
-  border-bottom: 2px solid #FA8078;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
 }
-nav ul {
-  text-align: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-nav ul li {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 11px;
-}
-.placeholder:after {
-  content: '\2665';
-  position: relative;
-  left: 50px;
-  color: #FA8078;
-}
-.placeholder:hover:after {
-  content: '\2665';
-  position: relative;
-  left: 50px;
-}
-.placeholder:hover:after:hover {
-  cursor: default;
-}
-nav ul li a {
-  margin: 11px 50px;
-  font-family: 'Playfair Display SC', serif;
-  font-weight: 300;
-  text-decoration: none;
-  color: #FAA899;
-  text-transform: lowercase;
-  font-size: .7rem;
-  position: relative;
+#landing p {
+  position: absolute;
+  left: 34%;
+  top: 145px;
+  color: #706044;
   font-style: italic;
 }
-nav ul li a:hover {
-  color: #FA8078;
-}
-.home-link h1 {
+#landing h1 {
   font-family: 'Euphoria Script', cursive;
-  font-size: 2.2rem;
+  font-size: 10rem;
   text-transform: none;
   color: #FA8078;
   text-align: center;
   position: relative;
-  top: -36px;
-  display: inline-block;
+  text-shadow: -2px -2px #FCE3D6;
+  margin-bottom: 0px;
 }
-.home-link h1:after {
-  content: '';
-  height: 5rem;
-  width: 15rem;
-  position: absolute;
-  background-color: #FCFCF7;
-  margin-left: -193px;
-  margin-top: -17px;
-  border-radius: 100%;
-  box-shadow: 0px 3px 0px -1px #FA8078;
-  z-index: -1;
-}
-.home-link span {
+#landing h1 span {
   font-family: 'Playfair Display SC', serif;
   color: #FAA899;
   font-style: italic;
   margin-right: -4px;
 }
-img {
-  max-width: 100%;
+#heart-lines {
+  width: 43%;
+  max-width: 515px;
+  display: block;
+  margin: 0 auto 15px;
 }
-.callout {
-  font-family: 'Playfair Display SC', serif;
-  font-style: italic;
-  font-size: 5rem;
-  margin-top: -91px;
-  color: #FCFCF7;
-  text-align: right;
-}
-section {
-  height: 500px;
-}
-section h1 {
-  text-align: right;
-  font-family: 'Euphoria Script', cursive;
-  color: #E1675F;
-  font-size: 5rem;
-  border-bottom: 1px solid #FAA899;
-  width: 50%;
-}
-section h1:after {
-  content: '\2767';
-  padding-left: 15px;
-  font-size: 2rem;
-  color: #FAA899;
-}
-section h1:before {
-  content: '\2619';
-  font-size: 2rem;
-  padding-right: 15px;
-  color: #FAA899;
-}
-section h4 {
-  text-align: left;
-  font-family: 'Euphoria Script', cursive;
-  color: #E1675F;
-  font-size: 5rem;
-  border-bottom: 1px solid #FAA899;
-  width: 50%;
-  float: right;
-}
-section h4 span {
-  font-size: 1.8rem;
-  color: #FAA899;
-}
-section h2 {
+.timeline {
+  width: 90%;
+  margin: 0 auto;
   text-align: center;
-  color: #FAA899;
-  font-size: 2rem;
+}
+.timeline-entry-v1 {
+  width: 300px;
+  position: relative;
+  background-color: #FCFCF7;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.timeline-entry-v1 h2 {
+  font-size: 0.8rem;
+  color: #E1675F;
+}
+.timeline-entry-v1 h3 {
+  margin-top: -0.5rem;
+  line-height: .4rem;
+  font-size: 0.7rem;
+  color: #FA8078;
+}
+.timeline-entry-v1 p {
+  color: #706044;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+.major-event-entry {
+  width: 70%;
+  margin: 0px auto 100px;
+  background-color: #FCFCF7;
+  border: 1px dashed #E6D491;
+  box-shadow: 0px 15px 15px -18px #706044;
+}
+.major-event-entry h2 {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  padding: 40px;
+  box-sizing: border-box;
+  text-align: left;
+  margin: 0px;
+}
+.major-event-entry strong {
+  float: left;
+  font-size: 6.5rem;
+  padding-right: 15px;
+  line-height: 6rem;
+  position: relative;
+  color: #DEC773;
+  top: 5px;
+}
+.story-content {
+  display: inline-block;
+  width: 250px;
+  position: relative;
+  background-color: #FCFCF7;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-style: italic;
+  vertical-align: top;
+}
+.story-content p {
+  font-size: 0.95rem;
+  margin-top: 0px;
+}
+.timeline-entry {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.timeline-entry .lisy {
+  text-align: right;
+}
+.timeline-entry .date {
+  text-align: center;
+  display: inline-block;
+}
+.timeline-entry .date h2 {
+  margin-top: 0px;
+  font-size: 0.8rem;
+  color: #E1675F;
+}
+.timeline-entry .date h3 {
+  margin-top: -0.5rem;
+  line-height: .4rem;
+  font-size: 0.7rem;
+  color: #FA8078;
+}
+.timeline-entry .mark {
+  text-align: left;
 }
 .palette-box-light-cream {
   width: 10%;
@@ -205,61 +206,50 @@ section h2 {
 }
 footer {
   position: fixed;
-  bottom: -4px;
+  bottom: -7px;
   left: 0;
   width: 100%;
 }
-@media screen and (max-width: 840px) {
-  nav ul li a {
-    display: none;
+@media screen and (max-width: 960px) {
+  #landing h1 {
+    font-size: 8rem;
   }
-  .home-link {
-    display: inline-block;
-  }
-  .home-link h1 {
-    font-family: 'Euphoria Script', cursive;
-    font-size: 1.5rem;
-    text-transform: none;
-    color: #FA8078;
-    text-align: center;
-    position: relative;
-    top: -30px;
-    display: inline-block;
-  }
-  .home-link h1:after {
-    content: '';
-    height: 5rem;
-    width: 12rem;
-    position: absolute;
-    background-color: #FCFCF7;
-    margin-left: -150px;
-    margin-top: -30px;
-    border-radius: 100%;
-    box-shadow: 0px 3px 0px -1px #FA8078;
-    z-index: -1;
+  #landing p {
+    left: 30%;
+    top: 105px;
   }
 }
-@media screen and (max-width: 450px) {
-  .home-link h1 {
-    font-family: 'Euphoria Script', cursive;
-    font-size: 1.3rem;
-    text-transform: none;
-    color: #FA8078;
-    text-align: center;
-    position: relative;
-    top: -32px;
-    display: inline-block;
+@media screen and (max-width: 600px) {
+  #landing h1 {
+    font-size: 4.7rem;
   }
-  .home-link h1:after {
-    content: '';
-    height: 4rem;
-    width: 9rem;
-    position: absolute;
+  #landing p {
+    font-size: .8rem;
+    top: 47px;
+    left: 27%;
+  }
+  .major-event-entry {
+    width: 95%;
+    margin: 0px auto 100px;
     background-color: #FCFCF7;
-    margin-left: -117px;
-    margin-top: -16px;
-    border-radius: 100%;
-    box-shadow: 0px 3px 0px -1px #FA8078;
-    z-index: -1;
+    border: 1px solid #E6D491;
+    box-shadow: 0px 15px 15px -18px #706044;
+  }
+  .major-event-entry h2 {
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: left;
+    margin: 0px;
+  }
+  .major-event-entry strong {
+    float: left;
+    font-size: 5rem;
+    padding-right: 15px;
+    line-height: 5rem;
+    position: relative;
+    color: #DEC773;
+    top: 5px;
   }
 }

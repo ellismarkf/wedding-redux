@@ -1,160 +1,152 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,900|Euphoria+Script|Playfair+Display+SC:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Euphoria+Script|Playfair+Display:400,400italic,700,700italic,900,900italic|Vollkorn:400italic,400|Playfair+Display+SC:400,400italic,700,700italic,900,900italic);
 @import './constants.less';
 
 body {
 	background-color: @light-cream;
 	font-size: 1rem;
+	font-family: 'Vollkorn', serif;
+	font-weight: 400;
+	color: @other-dark-gold;
+	background-image: url(http://wowmarkandray.com/img/topogrpahy2-01.png);
 }
 
-nav {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 40px;
-	z-index: 1;
-	background-color: @light-cream;
-	border-bottom: 2px solid @rose;
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
 }
 
-nav ul {
-	text-align: center;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	position: relative;
-}
+#landing {
 
-nav ul li {
-	display: inline-block;
-	vertical-align: top;
-	margin-top: 11px;
-}
-
-.placeholder:after {
-	content: '\2665';
-	position: relative;
-	left: 50px;
-	color: @rose;
-}
-
-.placeholder:hover:after {
-	content: '\2665';
-	position: relative;
-	left: 50px;
-	&:hover {
-		cursor: default;
+	p {
+		position: absolute;
+		left: 34%;
+		top: 145px;
+		color: @other-dark-gold;
+		font-style: italic;
 	}
-}
 
-nav ul li a {
-	margin: 11px 50px;
-	position: relative;
-	font-family: 'Playfair Display SC', serif;
-	font-weight: 300;
-	text-decoration: none;
-	color: @light-rose;
-	text-transform: lowercase;
-	font-size: .7rem;
-	position: relative;
-	font-style: italic;
-}
+	h1 {
+		font-family: 'Euphoria Script', cursive;
+		font-size: 10rem;
+		text-transform: none;
+		color: @rose;
+		text-align: center;
+		position: relative;
+		text-shadow: -2px -2px @light-rose-gold;
+		margin-bottom: 0px;
+	}
 
-nav ul li a:hover {
-	color: @rose;
-}
-
-.home-link h1 {
-	font-family: 'Euphoria Script', cursive;
-	font-size: 2.2rem;
-	text-transform: none;
-	color: @rose;
-	text-align: center;
-	position: relative;
-	top: -36px;
-	display: inline-block;
-}
-
-.home-link h1:after {
-	content: '';
-	height: 5rem;
-	width: 15rem;
-	position: absolute;
-	background-color: @light-cream;
-	margin-left: -193px;
-	margin-top: -17px;
-	border-radius: 100%;
-	box-shadow: 0px 3px 0px -1px @rose;
-	z-index: -1;
-}
-
-.home-link span {
-	font-family: 'Playfair Display SC', serif;
-	color: @light-rose;
-	font-style: italic;
-	margin-right: -4px;
-}
-
-img {
-	max-width: 100%;
-}
-
-.callout {
-	font-family: 'Playfair Display SC', serif;
-	font-style: italic;
-	font-size: 5rem;
-	margin-top: -91px;
-	color: @light-cream;
-	text-align: right;
-}
-
-section {
-	height: 500px;
-}
-
-section h1 {
-	text-align: right;
-	font-family: 'Euphoria Script', cursive;
-	color: @dark-rose;
-	font-size: 5rem;
-	border-bottom: 1px solid @light-rose;
-	width: 50%;
-}
-
-section h1:after {
-	content: '\2767';
-	padding-left: 15px;
-	font-size: 2rem;
-	color: @light-rose;
-}
-
-section h1:before {
-	content: '\2619';
-	font-size: 2rem;
-	padding-right: 15px;
-	color: @light-rose;
-}
-
-section h4 {
-	text-align: left;
-	font-family: 'Euphoria Script', cursive;
-	color: @dark-rose;
-	font-size: 5rem;
-	border-bottom: 1px solid @light-rose;
-	width: 50%;
-	float: right;
-	span {
-		font-size: 1.8rem;
+	h1 span {
+		font-family: 'Playfair Display SC', serif;
 		color: @light-rose;
+		font-style: italic;
+		margin-right: -4px;
+	}
+	
+}
+
+#heart-lines {
+	width: 43%;
+    max-width: 515px;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.timeline {
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.timeline-entry-v1 {
+	width: 300px;
+	position: relative;
+	background-color: @light-cream;
+	padding: 0 20px;
+	box-sizing: border-box;
+	h2 {
+		font-size: 0.8rem;
+		color: @dark-rose;
+	}
+	h3 {
+		margin-top: -.5rem;
+		line-height: .4rem;
+		font-size: 0.7rem;
+		color: @rose;
+	}
+	p {
+		color: @brown;
+		font-style: italic;
+		font-size: 0.9rem;
 	}
 }
 
-section h2 {
-	text-align: center;
-	color: @light-rose;
-	font-size: 2rem;
+.major-event-entry {
+	width: 70%;
+	margin: 0px auto 100px;
+	background-color: @light-cream;
+	border: 1px dashed @light-gold;
+	box-shadow: 0px 15px 15px -18px @brown;
+	h2 {
+		font-size: 1.2rem;
+		line-height: 2rem;
+		padding: 40px;
+		box-sizing: border-box;
+		text-align: left;
+		margin: 0px;
+	}
+	strong {
+		float: left;
+	    font-size: 6.5rem;
+	    padding-right: 15px;
+	    line-height: 6rem;
+	    position: relative;
+	    color: @gold;
+	    top: 5px;
+	}
 }
 
+.story-content {
+	display: inline-block;
+	width: 250px;
+	position: relative;
+	background-color: @light-cream;
+	padding: 0 20px;
+	box-sizing: border-box;
+	font-style: italic;
+	vertical-align: top;
+}
+.story-content p {
+	font-size: 0.95rem;
+	margin-top: 0px;
+}
+
+.timeline-entry {
+	text-align: center;
+	margin-bottom: 100px;
+	.lisy {
+		text-align: right;
+
+	}
+	.date {
+		text-align: center;
+		display: inline-block;
+		h2 {
+			margin-top: 0px;
+			font-size: 0.8rem;
+			color: @dark-rose;
+		}
+		h3 {
+			margin-top: -.5rem;
+			line-height: .4rem;
+			font-size: 0.7rem;
+			color: @rose;
+		}
+	}
+	.mark {
+		text-align: left;
+
+	}
+}
 
 .palette-box(@color) {
 	width: 10%;
@@ -204,64 +196,59 @@ section h2 {
 
 footer {
 	position: fixed;
-	bottom: -4px;
+	bottom: -7px;
 	left: 0;
 	width: 100%;
 }
 
-@media screen and (max-width: 840px) {
-	nav ul li a {
-		display: none;
-	}
-	.home-link {
-		display: inline-block;
-	}
-	.home-link h1 {
-		font-family: 'Euphoria Script', cursive;
-		font-size: 1.5rem;
-		text-transform: none;
-		color: @rose;
-		text-align: center;
-		position: relative;
-		top: -30px;
-		display: inline-block;
-	}
-
-	.home-link h1:after {
-		content: '';
-		height: 5rem;
-		width: 12rem;
-		position: absolute;
-		background-color: @light-cream;
-		margin-left: -150px;
-		margin-top: -30px;
-		border-radius: 100%;
-		box-shadow: 0px 3px 0px -1px @rose;
-		z-index: -1;
+@media screen and (max-width: 960px) {
+	#landing {
+		h1 {
+			font-size: 8rem;
+		}
+		p {
+			left: 30%;
+			top: 105px;
+		}
 	}
 }
 
-@media screen and (max-width: 450px) {
-	.home-link h1 {
-		font-family: 'Euphoria Script', cursive;
-		font-size: 1.3rem;
-		text-transform: none;
-		color: @rose;
-		text-align: center;
-		position: relative;
-		top: -32px;
-		display: inline-block;
+
+@media screen and (max-width: 600px) {
+	#landing {
+		h1 {
+			font-size: 4.7rem;
+		}
+
+		p {
+			font-size: .8rem;
+			top: 47px;
+			left: 27%;
+		}
 	}
-	.home-link h1:after {
-		content: '';
-		height: 4rem;
-		width: 9rem;
-		position: absolute;
+
+	.major-event-entry {
+		width: 95%;
+		margin: 0px auto 100px;
 		background-color: @light-cream;
-		margin-left: -117px;
-		margin-top: -16px;
-		border-radius: 100%;
-		box-shadow: 0px 3px 0px -1px @rose;
-		z-index: -1;
+		border: 1px solid @light-gold;
+		box-shadow: 0px 15px 15px -18px @brown;
+		h2 {
+			font-size: 0.95rem;
+			line-height: 1.5rem;
+			padding: 40px;
+			box-sizing: border-box;
+			text-align: left;
+			margin: 0px;
+		}
+		strong {
+			float: left;
+		    font-size: 5rem;
+		    padding-right: 15px;
+		    line-height: 5rem;
+		    position: relative;
+		    color: @gold;
+		    top: 5px;
+		}
 	}
 }
