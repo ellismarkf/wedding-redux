@@ -6,7 +6,6 @@ const MajorEventEntry = ({ message }) =>  {
 		<div className="major-event-entry">
 			<FormattedMessage {...message}>
 				{ ( value ) => {
-					console.log(value)
 					const firstLetter = value[0]
 					const rest = value.substr(1)
 					return (
@@ -14,7 +13,6 @@ const MajorEventEntry = ({ message }) =>  {
 					)	
 				}}
 			</FormattedMessage>
-			<FormattedMessage {...message} />
 		</div>
 	)
 }
