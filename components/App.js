@@ -2,6 +2,7 @@ import React from 'react'
 import LocaleSwitcher from './LocaleSwitcher'
 import Landing from './Landing'
 import Timeline from './Timeline'
+import Rsvp from './Rsvp'
 import Footer from './Footer'
 
 import DevTools from './DevTools'
@@ -11,14 +12,11 @@ const App = ({ dispatch }) => (
 		<LocaleSwitcher dispatch={dispatch}/>
 		<Landing />
 		<Timeline />
+		<Rsvp />
 		<Footer />
-		{__DEVTOOLS__ &&
-			<DevTools />}
 	</div>
 )
+		// {__DEVTOOLS__ &&
+		// 	<DevTools />}
 
 export default App
-
-// import rsvpSubmit from '../utils/rsvpSubmit'
-// import RsvpForm from './RsvpForm'
-// import DonateForm from './DonateForm'

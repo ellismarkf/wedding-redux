@@ -27,6 +27,8 @@ module.exports = {
 			}
 		,
 			{ test: /\.(png|jpg|gif)$/, loader: 'url-loader?limit=8192' }
+		,
+			{ test: /\.(png|jpg|gif)$/, loader: 'img' }
 		]	
 	},
 	plugins: [

@@ -1,10 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Euphoria+Script|Playfair+Display:400,400italic,700,700italic,900,900italic|Vollkorn:400italic,400|Playfair+Display+SC:400,400italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Euphoria+Script|IM+Fell+DW+Pica:400italic,400|Playfair+Display+SC:400italic);
 @import './constants.less';
 
 body {
 	background-color: @light-cream;
 	font-size: 1rem;
-	font-family: 'Vollkorn', serif;
+	font-family: 'IM Fell DW Pica', serif;
 	font-weight: 400;
 	color: @other-dark-gold;
 	background-image: url(http://wowmarkandray.com/img/topogrpahy2-01.png);
@@ -18,12 +18,18 @@ img {
 	max-width: 100%;
 }
 
+.locale-switcher {
+	position: fixed;
+	top: 3px;
+	left: 5px;
+}
+
 #landing {
 
 	p {
 		position: absolute;
 		left: 34%;
-		top: 145px;
+		top: 140px;
 		color: @other-dark-gold;
 		font-style: italic;
 	}
@@ -101,9 +107,10 @@ img {
 .major-event-entry {
 	width: 70%;
 	margin: 0px auto 100px;
-	background-color: @light-cream;
+	background-color: @translucent-white;
 	border: 1px solid @light-gold;
 	box-shadow: 0px 15px 15px -18px @brown;
+	max-width: 710px;
 	h2 {
 		font-size: 1.2rem;
 		line-height: 2rem;
@@ -148,6 +155,9 @@ img {
 	.date {
 		text-align: center;
 		display: inline-block;
+		position: relative;
+		background-color: @light-cream;
+		padding: 4px 0px;
 		h2 {
 			margin-top: 0px;
 			font-size: 0.8rem;
@@ -160,17 +170,355 @@ img {
 			color: @rose;
 		}
 	}
+	.date:before {
+		content: '\2665';
+	    position: absolute;
+	    top: -30px;
+	    color: @gold;
+	    background-color: @light-cream;
+	    padding: 5px;
+	    left: 50%;
+	    margin-left: -12px;
+	}
 	.mark {
 		text-align: left;
 
 	}
 }
 
+.timeline-entry-img {
+	text-align: center;
+	margin-bottom: 15px;
+	.date {
+		text-align: center;
+		display: inline-block;
+		position: relative;
+		background-color: @light-cream;
+		padding: 4px 0px;
+		h2 {
+			margin-top: 0px;
+			font-size: 0.8rem;
+			color: @dark-rose;
+		}
+		h3 {
+			margin-top: -.5rem;
+			line-height: .4rem;
+			font-size: 0.7rem;
+			color: @rose;
+		}
+	}
+	.date:before {
+		content: '\2665';
+	    position: absolute;
+	    top: -30px;
+	    color: @gold;
+	    background-color: @light-cream;
+	    padding: 5px;
+	    left: 50%;
+	    margin-left: -12px;
+	}
+}
+
 .timeline {
-	img {
-		margin-bottom: 100px;
+	.img-container {
+		max-width: 900px;
+		display: inline-block;
+		margin: 0 auto 100px;
+		border: 1px solid @light-rose-gold;
+		padding: 12px 12px 6px;
+		background-color: @light-cream;
 		box-shadow: 0px 15px 15px -18px @brown;
 	}
+}
+
+.rsvp {
+	position: relative;
+	height: 1120px;
+	overflow: hidden;
+}
+
+.envelope-top {
+	background-image: url(../assets/gold-envelope-top-01.png);
+	margin-left: -300px;
+	height: 570px;
+	width: 600px;
+	background-size: 600px 570px;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	left: 50%;
+	z-index: 100;
+	bottom: -25px;
+}
+
+.form-active {
+	width: 550px;
+	height: 1120px;
+	background-color: white;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -275px;
+	z-index: 101;
+	box-shadow: 0px 0px 20px -7px @brown;
+	box-sizing: border-box;
+	padding-top: 30px;
+	.slideInUp;
+}
+
+.form-active.slideOutDown {
+	width: 550px;
+	height: 1080px;
+	background-color: white;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -275px;
+	z-index: 101;
+	box-shadow: 0px 0px 20px -7px @brown;
+	box-sizing: border-box;
+	padding-top: 30px;
+	.slideOutDown;
+}
+
+.form-inactive {
+	position: absolute;
+	width: 550px;
+	height: 1080px;
+	background-color: white;
+	position: absolute;
+	bottom: -900px;
+	left: 50%;
+	margin-left: -275px;
+	z-index: 100;
+	box-shadow: 0px 0px 20px -7px @brown;
+	box-sizing: border-box;
+	padding-top: 30px;
+}
+
+.insert {
+	box-shadow: 15px 0px 0px 0px @rose-gold inset,
+				0px 15px 0px 0px @rose-gold inset,
+				-15px 0px 0px 0px @rose-gold inset;
+	height: 900px;
+	width: 90%;
+	margin: 0 auto;
+	padding: 9% 10%;
+	box-sizing: border-box;
+	h3 {
+		font-family: 'Euphoria Script', cursive;
+		text-align: center;
+		color: @rose;
+		text-shadow: -2px -2px @light-rose-gold;
+		font-size: 3rem;
+		margin-top: 0px;
+	}
+	h3:after {
+		font-family: 'Arial', sans-serif;
+		content: '\2767';
+		padding-left: 15px;
+		font-size: 1.6rem;
+		color: @gold;
+		text-shadow: none;
+	}
+
+	h3:before {
+		font-family: 'Arial', sans-serif;
+		content: '\2619';
+		font-size: 1.6rem;
+		padding-right: 15px;
+		color: @gold;
+		text-shadow: none;
+	}
+	hr {
+		width: 80%;
+		background-color: @cream;
+		border: none;
+		height: 1px;
+		margin: 30px auto;
+	}
+	form {
+		text-align: center;
+		font-size: 1.1rem;
+		color: @light-brown;
+		.stressed-answer {
+			font-style: italic;
+		}
+		input, p {
+			margin: 0px;
+		}
+		p {
+			margin-bottom: 10px;
+		}
+		input[type='text'] {
+			display: block;
+			background-color: white;
+			box-shadow: none;
+			border: none;
+			width: 100%;
+			text-align: center;
+			font-family: 'IM Fell DW Pica', serif;
+			font-size: 1.1rem;
+			color: @other-dark-gold;
+		}
+		input[type='text']::-webkit-input-placeholder,
+		input[type='text']:-moz-placeholder,  /* Firefox 18- */
+		input[type='text']::-moz-placeholder,   /* Firefox 19+ */
+		input[type='text']:-ms-input-placeholder {  
+		   color: @cream;  
+		}
+		input[type='text']:focus {
+			outline: none;
+		}
+		input[type='radio'] {
+			margin: 0px 10px;
+		}
+		button[type='submit'] {
+			font-family: 'IM Fell DW Pica', serif;
+			font-style: italic;
+			color: @other-dark-gold;
+			padding: 10px;
+			background-color: @light-cream;
+			border: 1px solid @gold;
+			border-radius: 5px;
+			box-shadow: 0px 0px 15px -10px @brown;
+			cursor: pointer;
+		}
+		button[type='submit']:hover {
+			background-color: @cream;
+		}
+	}
+
+	form:after {
+		content: '\221E';
+		font-size: 4.5rem;
+		color: @light-rose-gold;
+		position: absolute;
+		bottom: 110px;
+		left: 45%;
+	}
+}
+
+@-webkit-keyframes slideInUp {
+  from {
+  	z-index: 101;
+    -webkit-transform: translateZ(0);
+    -webkit-transform: translate3d(0, 98%, 0);
+    transform: translate3d(0, 98%, 0);
+    visibility: visible;
+  }
+
+  to {
+  	z-index: 101;
+  	-webkit-transform: translateZ(0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInUp {
+	from {
+		z-index: 101;
+		-webkit-transform: translateZ(0);
+	    -webkit-transform: translate3d(0, 98%, 0);
+	  	transform: translate3d(0, 98%, 0);
+	  	visibility: visible;
+	}
+
+	to {
+		z-index: 101;
+		-webkit-transform: translateZ(0);
+	    -webkit-transform: translate3d(0, 0, 0);
+	  	transform: translate3d(0, 0, 0);
+	}
+}
+
+.slideInUp {
+    -webkit-animation-name: slideInUp;
+  	animation-name: slideInUp;
+  	animation-duration: 2s;
+}
+
+@-webkit-keyframes slideOutDown {
+	from {
+		z-index: 101;
+		-webkit-transform: translateZ(0);
+	    -webkit-transform: translate3d(0, 0, 0);
+	  	transform: translate3d(0, 0, 0);
+	  	visibility: visible;
+	}
+
+	to {
+		z-index: 100;
+		-webkit-transform: translateZ(0);
+	    -webkit-transform: translate3d(0, 98%, 0);
+	  	transform: translate3d(0, 98%, 0);
+	}
+}
+
+@keyframes slideOutDown {
+  from {
+  	z-index: 101;
+  	-webkit-transform: translateZ(0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+  	z-index: 100;
+  	-webkit-transform: translateZ(0);
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.slideOutDown {
+  -webkit-animation-name: slideOutDown;
+  animation-name: slideOutDown;
+  animation-duration: 2s
+}
+
+.donateBtn input[type='image'] {
+	border-radius: 5px;
+}
+
+.donateBtn input[type='image']:hover {
+	background-color: @cream;
+}
+
+.reset {
+	background-color: transparent;
+    border: none;
+    font-family: 'IM Fell DW Pica', serif;
+    font-style: italic;
+    margin: 192px auto 0px;
+    display: block;
+    color: @other-dark-gold;
+}
+
+.skip {
+	.reset;
+	font-size: .85rem;
+	margin-top: 40px;
+	color: @light-brown;
+}
+
+.reset:hover, .skip:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.envelope-bottom {
+	background-image: url(../assets/gold-envelope-bottom-01.png);
+	margin: 0 auto;
+	height: 320px;
+	width: 600px;
+	background-size: 600px 320px;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	z-index: 102;
+	position: relative;
+	top: 830px;
 }
 
 .palette-box(@color) {
@@ -224,6 +572,7 @@ footer {
 	bottom: -7px;
 	left: 0;
 	width: 100%;
+	z-index: 105;
 }
 
 @media screen and (max-width: 960px) {
@@ -233,7 +582,7 @@ footer {
 		}
 		p {
 			left: 30%;
-			top: 105px;
+			top: 110px;
 		}
 	}
 }
@@ -247,7 +596,7 @@ footer {
 
 		p {
 			font-size: .8rem;
-			top: 47px;
+			top: 55px;
 			left: 27%;
 		}
 	}

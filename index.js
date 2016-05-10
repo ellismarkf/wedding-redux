@@ -24,11 +24,21 @@ const store = createStore(
 	)
 )
 
-const App = global.Intl ? Intlized : BrowserNotSupported
+const init = () => {
+	render(
+		<Provider store={store}>
+			<Intlized />
+		</Provider>,
+		document.getElementById('root')
+	)
+}
 
-render(
-	<Provider store={store}>
-		<App />
-	</Provider>,
-	document.getElementById('root')
-)
+if (!window.Intl) {
+        require.ensure(['intl'], (require) => {
+            window.Intl = require('intl')
+            init()
+        }, "IntlBundle");
+    }
+else {
+   init()
+}
