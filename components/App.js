@@ -14,9 +14,9 @@ const App = ({ dispatch }) => (
 		<Timeline />
 		<Rsvp />
 		<Footer />
+		{__DEVTOOLS__ &&
+			<DevTools />}
 	</div>
 )
-		// {__DEVTOOLS__ &&
-		// 	<DevTools />}
 
 export default App

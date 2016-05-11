@@ -22,6 +22,7 @@ img {
 	position: fixed;
 	top: 3px;
 	left: 5px;
+	z-index: 150;
 }
 
 #landing {
@@ -337,6 +338,11 @@ img {
 		height: 1px;
 		margin: 30px auto;
 	}
+	p.error-msg {
+		text-align: center;
+		color: @dark-rose;
+		.slideInUp;
+	}
 	form {
 		text-align: center;
 		font-size: 1.1rem;
@@ -387,6 +393,10 @@ img {
 		button[type='submit']:hover {
 			background-color: @cream;
 		}
+		input:disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
 	}
 
 	form:after {
@@ -397,6 +407,10 @@ img {
 		bottom: 110px;
 		left: 45%;
 	}
+}
+
+.insert.disabled {
+	cursor: progress;
 }
 
 @-webkit-keyframes slideInUp {
@@ -479,6 +493,7 @@ img {
 }
 
 .donateBtn input[type='image'] {
+	margin-top: 30px;
 	border-radius: 5px;
 }
 
@@ -491,6 +506,7 @@ img {
     border: none;
     font-family: 'IM Fell DW Pica', serif;
     font-style: italic;
+    font-size: .8rem;
     margin: 192px auto 0px;
     display: block;
     color: @other-dark-gold;
@@ -498,7 +514,7 @@ img {
 
 .skip {
 	.reset;
-	font-size: .85rem;
+	font-size: .9rem;
 	margin-top: 40px;
 	color: @light-brown;
 }
