@@ -19,7 +19,7 @@ export default {
 	'timeline.major-entry.geneva': "While he was in Switzerland, they visited museums, vineyards, hipster theaters, trivia bars, ate croissants every morning, took an insane amount of pictures, and realized that they were even better together than they thought.",
 	'timeline.major-entry.christmas': "She acted as a translator when his Spanish failed, but he held his own.  They went to the beach and to the mountains, and he felt at home with her family, and started to think this was the girl he'd spend the rest of his life with.",
 	'timeline.major-entry.graduation': "Her graduation from medical school was reason enough to be there, but he wanted to take the opportunity to talk to her dad about marriage.  He wasn't as eloquent as he hoped he would've been, but he got the message across.",
-	'timeline.major-entry.proposal': "Despite the romantic gestures he'd been planning, he visited her in March of 2015, and brought the ring just in case the right moment presented itself.  It did - he proposed on a mountaintop at sunset.  After a terrifying silence she said yes.",
+	'timeline.major-entry.proposal': "Despite the romantic gestures he'd been planning, when he visited her in March of 2015, he brought the ring just in case the right moment presented itself.  It did.  He proposed on a mountaintop at sunset, and after a terrifyingly long silence she said yes.",
 	'timeline.mark.mar2012': 'Long, dismal days were confirming that his "career" in marketing was not the right move.',
 	'timeline.mark.jul2012.1': "He was immediately smitten with her accent, and asked her questions just to hear her speak.",
 	'timeline.mark.jul2012.2': "While they hung out, his friends deliberately positioned themselves between him and her, because they could tell he was falling for her.",
@@ -35,8 +35,18 @@ export default {
 	'locations.MTY': 'Monterrey, MX',
 	'locations.GVA': 'Geneva, CH',
 	'locations.GYE': 'Guayaquil, EC',
-	'locations.BOS': 'Boston, MA'
+	'locations.BOS': 'Boston, MA',
+	'form.title': "Join Us!",
+	'form.attendingQ': 'Will you be celebrating with us?',
+	'form.attendingRA': "Can't wait!",
+	'form.attendingRN': "I'll be there in spirit!",
+	'form.guestQ': "Are you bringing a guest?",
+	'form.hotelQ': "We're trying to secure hotel group rates. Interested?",
+	'form.affirmative': "Yes",
+	'form.negative': "No",
+	'form.donateHint': "Already RSVP'd? Click here to help us with our honeymoon plans!",
+	'confirmed.title': "We can't wait to celebrate with you!",
+	'confirmed.hotel': "If you elected to receive information about hotels, you'll be getting an email after we secure the group rate.",
+	'confirmed.help': "Finally, your presence at our wedding is gift enough, but we will gratefully accept contributions to our honeymoon fund, should you kindly wish to help us on our way.",
+	'confirmed.switch': "Switch to RSVP form."
 }
-
-// he was nervous because he didn't speak French (or German), but all of that melted away when he saw her running to him at the airport.
-// he got to the airport an hour early and still has the parking receipt
