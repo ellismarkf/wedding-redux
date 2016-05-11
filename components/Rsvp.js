@@ -5,29 +5,32 @@ import ThankYouInsert from './ThankYouInsert'
 
 class Rsvp extends Component {
 	render() {
-		const { dispatch, hasRSVPd, animating } = this.props
+		const { dispatch, hasRSVPd, animating, isFetching, errMsg } = this.props
 		return (
 			<div className='rsvp'>
 				<div className='envelope-top'></div>
-				<RsvpForm dispatch={dispatch} hasRSVPd={hasRSVPd} animating={animating}/>
-				<ThankYouInsert dispatch={dispatch} hasRSVPd={hasRSVPd} animating={animating}/>
+				<RsvpForm
+					dispatch={dispatch}
+					hasRSVPd={hasRSVPd}
+					animating={animating}
+					isFetching={isFetching}
+					errMsg={errMsg}/>
+				<ThankYouInsert
+					dispatch={dispatch}
+					hasRSVPd={hasRSVPd}
+					animating={animating}
+					isFetching={isFetching}/>
 				<div className='envelope-bottom'></div>
 			</div>
 		)
 	}
 }
 
-// const Rsvp = () => (
-// 	<div className='rsvp'>
-// 		<div className='envelope-top'></div>
-// 		<RsvpForm />
-// 		<div className='envelope-bottom'></div>
-// 	</div>
-// )
-
 const mapStateToProps = (state) => ({
 	hasRSVPd: state.rsvp.hasRSVPd,
-	animating: state.rsvp.animating
+	animating: state.rsvp.animating,
+	isFetching: state.rsvp.isFetching,
+	errMsg: state.rsvp.errMsg
 })
 
 export default connect(mapStateToProps)(Rsvp)

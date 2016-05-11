@@ -1,6 +1,22 @@
 import React from 'react'
+import { defineMessages, FormattedMessage } from 'react-intl'
 import DonateButton from './DonateButton'
-import { resetRSVP } from '../actions/rsvp'
+import { switchRSVPStatus } from '../actions/rsvp'
+
+const messages = defineMessages({
+	title: {
+		id: 'confirmed.title'
+	},
+	hotel: {
+		id: 'confirmed.hotel'
+	},
+	help: {
+		id: 'confirmed.help'
+	},
+	switchForm: {
+		id: 'confirmed.switch'
+	}
+})
 
 const ThankYouInsert = ({ hasRSVPd, animating, dispatch }) => {
 	let rsvpClass
@@ -11,18 +27,18 @@ const ThankYouInsert = ({ hasRSVPd, animating, dispatch }) => {
 	} else if (!hasRSVPd) {
 		rsvpClass = 'form-inactive'
 	}
-	console.log(rsvpClass)
+	const { title, hotel, help, switchForm } = messages
 	return (
 		<div className={rsvpClass}>
 			<div className='insert'>
-				<h3>We can't wait to celebrate with you!</h3>
+				<h3><FormattedMessage {...title}/></h3>
 				<hr />
-				<p>If you elected to receive information about hotels, you'll be getting an email after we secure the group rate.</p>
+				<p><FormattedMessage {...hotel}/></p>
 				<hr />
-				<p>Finally, your presence at our wedding is gift enough, but we will gratefully accept contributions to our honeymoon fund, should you kindly wish to help us on our way.</p>
+				<p><FormattedMessage {...help}/></p>
 				<hr />
 				<DonateButton />
-				<button className='reset' onClick={ (e) => dispatch(resetRSVP(e)) }>Switch to RSVP form.</button>
+				<button className='reset' onClick={ (e) => dispatch(switchRSVPStatus(e, false)) }><FormattedMessage {...switchForm}/></button>
 			</div>
 		</div>
 	)
