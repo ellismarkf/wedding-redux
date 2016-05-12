@@ -2,7 +2,6 @@ import React from 'react'
 import { defineMessages, FormattedMessage } from 'react-intl'
 import MajorEventEntry from './MajorEventEntry'
 import TimelineEntry from './TimelineEntry'
-import Carousel from './Carousel'
 
 const messages = defineMessages({
 	overview: {
@@ -29,38 +28,89 @@ const messages = defineMessages({
 	proposal: {
 		id: 'timeline.major-entry.proposal'
 	},
+	courtWedding: {
+		id: 'timeline.major-entry.court-wedding'
+	},
 	mark: {
 		earlyCareer: {
 			id: 'timeline.mark.mar2012'
 		},
-		firstMeeting1: {
-			id: 'timeline.mark.jul2012.1'
-		},
-		firstMeeting2: {
-			id: 'timeline.mark.jul2012.2'
+		firstMeeting: {
+			id: 'timeline.mark.jul2012'
 		},
 		endRelationship: {
 			id: 'timeline.mark.jun2013'
 		},
 		visitJoke: {
 			id: 'timeline.mark.jul2013'
+		},
+		accidentallyInLove: {
+			id: 'timeline.mark.oct2013'
+		},
+		tresLechesSurprise: {
+			id: 'timeline.mark.dec2013'
+		},
+		careerChange: {
+			id: 'timeline.mark.feb2014'
+		},
+		switzerlandHelp: {
+			id: 'timeline.mark.mar2014'
+		},
+		study: {
+			id: 'timeline.mark.jun2014'
+		},
+		birthdayDinner: {
+			id: 'timeline.mark.oct2014'
+		},
+		backToHouston: {
+			id: 'timeline.mark.nov2014'
+		},
+		graduation: {
+			id: 'timeline.mark.jan2015'
+		},
+		flatTires: {
+			id: 'timeline.mark.feb2015'
 		}
 	},
 	lisy: {
 		harvard: {
 			id: 'timeline.lisy.jun2012'
 		},
-		firstMeeting1: {
-			id: 'timeline.lisy.jul2012.1'
-		},
-		firstMeeting2: {
-			id: 'timeline.lisy.jul2012.2'
+		firstMeeting: {
+			id: 'timeline.lisy.jul2012'
 		},
 		endRelationship: {
-			id: 'timeline.lisy.nov2012'
+			id: 'timeline.lisy.feb2013'
 		},
 		firstMove: {
 			id: 'timeline.lisy.jul2013'
+		},
+		foodNote: {
+			id: 'timeline.lisy.sep2013'
+		},
+		firstLove: {
+			id: 'timeline.lisy.oct2013'
+		},
+		packApt: {
+			id: 'timeline.lisy.dec2013.1'
+		},
+		backHome: {
+			id: 'timeline.lisy.dec2013.2'
+		},
+		accepted: {
+			id: 'timeline.lisy.feb2014'
+		},
+		arriveSwitz: {
+			id: 'timeline.lisy.apr2014'
+		},
+		anniversary: {
+			id: 'timeline.lisy.sep2014'
+		},
+		graduation: {
+			id: 'timeline.lisy.jan2015'
+		},
+		towTruck: {
+			id: 'timeline.lisy.feb2015'
 		}
 	},
 	dates: {
@@ -73,8 +123,8 @@ const messages = defineMessages({
 		jul2012: {
 			id: 'dates.jul2012'
 		},
-		nov2012: {
-			id: 'dates.nov2012'
+		feb2013: {
+			id: 'dates.feb2013'
 		},
 		jun2013: {
 			id: 'dates.jun2013'
@@ -84,6 +134,48 @@ const messages = defineMessages({
 		},
 		aug2013: {
 			id: 'dates.aug2013'
+		},
+		sep2013: {
+			id: 'dates.sep2013'
+		},
+		oct2013: {
+			id: 'dates.oct2013'
+		},
+		dec2013: {
+			id: 'dates.dec2013'
+		},
+		feb2014: {
+			id: 'dates.feb2014'
+		},
+		mar2014: {
+			id: 'dates.mar2014'
+		},
+		apr2014: {
+			id: 'dates.apr2014'
+		},
+		jun2014: {
+			id: 'dates.jun2014'
+		},
+		sep2014: {
+			id: 'dates.sep2014'
+		},
+		oct2014: {
+			id: 'dates.oct2014'
+		},
+		nov2014: {
+			id: 'dates.nov2014'
+		},
+		jan2015: {
+			id: 'dates.jan2015'
+		},
+		feb2015: {
+			id: 'dates.feb2015'
+		},
+		mar2015: {
+			id: 'dates.mar2015'
+		},
+		apr2015: {
+			id: 'dates.apr2015'
 		},
 		may2015: {
 			id: 'dates.may2015'
@@ -101,6 +193,9 @@ const messages = defineMessages({
 		},
 		MTY: {
 			id: 'locations.MTY'
+		},
+		MXC: {
+			id: 'locations.MXC'
 		},
 		GVA: {
 			id: 'locations.GVA'
@@ -126,20 +221,15 @@ const Timeline = () => {
 				date={ dates.jun2012 }/>
 			<MajorEventEntry message={ messages.firstMeeting } />
 			<TimelineEntry
-				mark={ mark.firstMeeting1 }
-				lisy={ lisy.firstMeeting1 }
-				location={ locations.HTX }
-				date={ dates.jul2012 }/>
-			<TimelineEntry
-				mark={ mark.firstMeeting2 }
-				lisy={ lisy.firstMeeting2 }
+				mark={ mark.firstMeeting }
+				lisy={ lisy.firstMeeting }
 				location={ locations.HTX }
 				date={ dates.jul2012 }/>
 			<MajorEventEntry message={ messages.leaveOfAbsence } />
 			<TimelineEntry
 				lisy={ lisy.endRelationship }
 				location={ locations.MTY }
-				date={ dates.nov2012 }/>
+				date={ dates.feb2013 }/>
 			<TimelineEntry
 				mark={ mark.endRelationship }
 				location={ locations.ATX }
@@ -165,33 +255,68 @@ const Timeline = () => {
 			<div className='img-container'>
 				<img src={require('../assets/fireworks.gif')} alt="fireworks" />
 			</div>
+			<TimelineEntry
+				lisy={lisy.foodNote}
+				location={locations.MTY}
+				date={dates.sep2013}/>
+			<TimelineEntry
+				mark={mark.accidentallyInLove}
+				location={locations.ATX}
+				date={dates.oct2013}/>
+			<TimelineEntry
+				lisy={lisy.firstLove}
+				location={locations.MTY}
+				date={dates.oct2013}/>
+			<TimelineEntry
+				mark={mark.tresLechesSurprise}
+				lisy={lisy.packApt}
+				location={locations.MTY}
+				date={dates.dec2013}/>
+			<TimelineEntry
+				lisy={lisy.backHome}
+				location={locations.GYE}
+				date={dates.dec2013}/>
+			<TimelineEntry
+				mark={mark.careerChange}
+				lisy={lisy.accepted}
+				location={locations.GYE}
+				date={dates.feb2014}/>
+			<TimelineEntry
+				mark={mark.switzerlandHelp}
+				location={locations.ATX}
+				date={dates.mar2014}/>
+			<TimelineEntry
+				lisy={lisy.arriveSwitz}
+				location={locations.GVA}
+				date={dates.apr2014}/>
 			<MajorEventEntry message={ messages.geneva } />
-			<div className="timeline-entry">
-				<div className="story-content lisy">
-					<p>something about mexico city trip</p>
-				</div>
-				<div className="date">
-					<h2>Mexico City, MX</h2>
-					<h3>Fall, 2014</h3>
-				</div>
-				<div className="story-content mark">
-					<p>he got her an orchid for her birthday</p>
-				</div>
-			</div>
+			<TimelineEntry
+				mark={mark.study}
+				location={locations.ATX}
+				date={dates.jun2014}/>
+			<TimelineEntry
+				lisy={lisy.anniversary}
+				location={locations.MXC}
+				date={dates.sep2014}/>
+			<TimelineEntry
+				mark={mark.birthdayDinner}
+				location={locations.MXC}
+				date={dates.oct2014}/>
+			<TimelineEntry
+				mark={mark.backToHouston}
+				location={locations.HTX}
+				date={dates.nov2014}/>
 			<MajorEventEntry message={ messages.christmas } />
-			<MajorEventEntry message={ messages.graduation } />
-			<div className="timeline-entry">
-				<div className="story-content lisy">
-					<p>she called the tow truck for him and acted very suprised when he finally arrived</p>
-				</div>
-				<div className="date">
-					<h2>Monterrey, MX</h2>
-					<h3>Spring, 2015</h3>
-				</div>
-				<div className="story-content mark">
-					<p>he got two flat tires while driving to suprise her for Valentine's Day</p>
-				</div>
-			</div>
+			<TimelineEntry
+				mark={mark.graduation}
+				lisy={lisy.graduation}
+				location={locations.MTY}
+				date={dates.jan2015}/>
+			<TimelineEntry
+				mark={mark.flatTires}
+				lisy={lisy.towTruck}
+				location={locations.MTY}
+				date={dates.feb2015}/>
 			<MajorEventEntry message={ messages.proposal } />
 			<TimelineEntry
 				location={ locations.HTX }
@@ -199,18 +324,7 @@ const Timeline = () => {
 			<div className='img-container'>
 				<img src={require('../assets/brick-wall.jpg')} />
 			</div>
-			<div className="timeline-entry">
-				<div className="story-content lisy">
-					<p>she looked heavenly</p>
-				</div>
-				<div className="date">
-					<h2>Houston, TX</h2>
-					<h3>Summer, 2015</h3>
-				</div>
-				<div className="story-content mark">
-					<p>he was speechless</p>
-				</div>
-			</div>
+			<MajorEventEntry message={ messages.courtWedding } />
 		</section>
 	)
 }
