@@ -30,7 +30,7 @@ const ThankYouInsert = ({ hasRSVPd, animating, dispatch }) => {
 	const { title, hotel, help, switchForm } = messages
 	return (
 		<div className={rsvpClass}>
-			<div className='insert'>
+			<div className='insert confirmation'>
 				<h3><FormattedMessage {...title}/></h3>
 				<hr />
 				<p><FormattedMessage {...hotel}/></p>

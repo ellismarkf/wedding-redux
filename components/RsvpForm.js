@@ -74,9 +74,10 @@ const RsvpForm = ({ dispatch, hasRSVPd, animating, isFetching, errMsg }) => {
 					<hr />
 					<button type='submit' disabled={isFetching}>RSVP</button>
 				</form>
-				<button className='skip' onClick={ (e) => dispatch(switchRSVPStatus(e, true)) }>
+				<p className='skip'>
 					<FormattedMessage {...donateHint}/>
-				</button>
+				</p>
+				<DonateButton />
 				{errMsg &&
 					<p className='error-msg'>{errMsg}</p>}
 			</div>
