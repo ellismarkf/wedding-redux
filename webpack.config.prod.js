@@ -46,7 +46,7 @@ module.exports = {
 			excludeChunks: ['index'],
 			inject: 'body'
 		}),
-		new ExtractTextPlugin("index.css"),
+		new ExtractTextPlugin("[name].css"),
 		new CommonsChunkPlugin("commons.chunk.js"),
 		new webpack.optimize.OccurenceOrderPlugin(),
 		new webpack.optimize.DedupePlugin(),
@@ -58,7 +58,10 @@ module.exports = {
 		new webpack.NoErrorsPlugin(),
 		new webpack.DefinePlugin({
 		  	__DEVELOPMENT___: false,
-		  	__DEVTOOLS__: false
+		  	__DEVTOOLS__: false,
+		  	'process.env': {
+		  	  'NODE_ENV': JSON.stringify('production')
+		  	}
 		})
 	]
 }

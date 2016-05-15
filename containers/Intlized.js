@@ -8,7 +8,7 @@ import { localeSwitch } from '../actions/locale'
 class Intlized extends Component {
 	componentDidMount() {
 	    const { dispatch } = this.props
-	    const locale = (navigator.languages[0] || navigator.browserLanguage).split('-')[0];
+	    const locale = (navigator.language || navigator.userLanguage || navigator.languages[0] || navigator.browserLanguage).split('-')[0]
 	    dispatch(localeSwitch(locale))
 	}
 

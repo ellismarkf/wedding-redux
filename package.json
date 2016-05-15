@@ -4,6 +4,8 @@
   "description": "source code for my wedding website",
   "main": "index.js",
   "scripts": {
+    "start": "node server.dev.js",
+    "build": "NODE_ENV=production && webpack --config webpack.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
