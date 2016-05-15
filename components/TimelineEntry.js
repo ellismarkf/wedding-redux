@@ -2,7 +2,8 @@ import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
 const TimelineEntry = ({ mark, lisy, location, date, img, invite }) => {
-	const entryClass = img || invite ? 'timeline-entry-img' : 'timeline-entry'
+	const entryType = img || invite ? 'timeline-entry-img' : 'timeline-entry'
+	const entryClass = mark && lisy ? entryType + ' double' : entryType
 	return (
 		<div>
 			<div className={entryClass}>

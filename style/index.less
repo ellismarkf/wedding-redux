@@ -663,7 +663,7 @@ footer {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 670px) {
 	#landing {
 		h1 {
 			font-size: 4.7rem;
@@ -680,6 +680,39 @@ footer {
 		h1 {
 			padding: 0px 35px;
 		}
+	}
+
+	.timeline-entry.double div.lisy,
+	.timeline-entry-img.double div.lisy {
+		margin-bottom: -12px;
+	}
+
+	.timeline-entry.double div.date:after,
+	.timeline-entry-img.double div.date:after {
+		content: '\2665';
+	    position: absolute;
+	    top: 0px;
+	    color: @gold;
+	    background-color: @light-cream;
+	    padding: 5px;
+	    right: 12%;
+	}
+	.timeline-entry.double div.date:before,
+	.timeline-entry-img.double div.date:before {
+		content: '\2665';
+	    position: absolute;
+	    top: 0px;
+	    color: @gold;
+	    background-color: @light-cream;
+	    padding: 5px;
+	    left: 15%;
+	}
+
+	.timeline-entry-img.double div,
+	.timeline-entry.double div {
+	    display: block;
+	    margin: 0 auto;
+	    text-align: center;
 	}
 
 	.major-event-entry {
