@@ -8,7 +8,7 @@ body {
 	font-family: 'IM Fell DW Pica', serif;
 	font-weight: 400;
 	color: @other-dark-gold;
-	background-image: url(http://wowmarkandray.com/img/topogrpahy2-01.png);
+	background-image: url(../assets/topogrpahy2-01.png);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,10 +21,26 @@ img {
 
 .locale-switcher {
 	position: fixed;
-	top: 3px;
-	left: 5px;
+	top: 5px;
+	left: 7px;
 	z-index: 150;
+	button {
+		padding: 0px;
+		margin-right: 5px;
+		border: none;
+		box-shadow: 0px 0px 15px -4px black;
+	}
+	button:hover {
+		cursor: pointer;
+	}
+	button:focus {
+		outline: none;
+	}
+	img {
+		width: 20px;
+	}
 }
+
 
 #landing {
 

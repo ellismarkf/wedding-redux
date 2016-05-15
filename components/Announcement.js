@@ -4,21 +4,21 @@ import TimelineEntry from './TimelineEntry'
 import SAMap from './SAMap'
 
 const messages = defineMessages({
-	titleIntro: {
-		id: 'landing.title-intro'
+	teaser: {
+		id: 'announcement.teaser'
 	},
-	date: {
-		id: 'dates.jul2016'
+	title: {
+		id: 'announcement.title'
 	},
-	location: {
-		id: 'locations.GYE'
+	subtitle: {
+		id: 'announcement.subtitle'
 	}
 })
 
 const Announcement = () => (
 	<section id="announcement">
-		<h1>They're getting married again!</h1>
-		<h3>(&nbsp;This time in the church. And you're invited!&nbsp;)</h3>
+		<h1><FormattedMessage {...messages.title} /></h1>
+		<h3>(&nbsp;<FormattedMessage {...messages.subtitle} />&nbsp;)</h3>
 		<SAMap />
 	</section>
 )

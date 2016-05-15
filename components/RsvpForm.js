@@ -2,6 +2,7 @@ import React from 'react'
 import { defineMessages, FormattedMessage } from 'react-intl'
 import DonateButton from './DonateButton'
 import { submitRSVP, switchRSVPStatus } from '../actions/rsvp'
+
 const messages = defineMessages({
 	title: {
 		id: 'form.title'

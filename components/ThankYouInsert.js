@@ -38,7 +38,9 @@ const ThankYouInsert = ({ hasRSVPd, animating, dispatch }) => {
 				<p><FormattedMessage {...help}/></p>
 				<hr />
 				<DonateButton />
-				<button className='reset' onClick={ (e) => dispatch(switchRSVPStatus(e, false)) }><FormattedMessage {...switchForm}/></button>
+				<button className='reset' onClick={ (e) => dispatch(switchRSVPStatus(e, false)) }>
+					<FormattedMessage {...switchForm}/>
+				</button>
 			</div>
 		</div>
 	)

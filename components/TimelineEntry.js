@@ -3,7 +3,6 @@ import { FormattedMessage } from 'react-intl'
 
 const TimelineEntry = ({ mark, lisy, location, date, img, invite }) => {
 	const entryClass = img || invite ? 'timeline-entry-img' : 'timeline-entry'
-	const ctx = img ? img : false;
 	return (
 		<div>
 			<div className={entryClass}>
@@ -25,7 +24,7 @@ const TimelineEntry = ({ mark, lisy, location, date, img, invite }) => {
 					<img src={img}/>
 				</div>}
 			{invite &&
-				<h3>{invite}</h3>}
+				<h3><FormattedMessage {...invite} /></h3>}
 		</div>
 	)
 }

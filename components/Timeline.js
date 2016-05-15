@@ -31,6 +31,9 @@ const messages = defineMessages({
 	courtWedding: {
 		id: 'timeline.major-entry.court-wedding'
 	},
+	teaser: {
+		id: 'announcement.teaser'
+	},
 	mark: {
 		earlyCareer: {
 			id: 'timeline.mark.mar2012'
@@ -182,6 +185,9 @@ const messages = defineMessages({
 		},
 		may2015: {
 			id: 'dates.may2015'
+		},
+		jul2016: {
+			id: 'dates.jul2016'
 		}
 	},
 	locations: {
@@ -332,6 +338,10 @@ const Timeline = () => {
 				date={ dates.may2015 }
 				img={require('../assets/brick-wall.jpg')}/>
 			<MajorEventEntry message={ messages.courtWedding } />
+			<TimelineEntry
+				date={ dates.jul2016 }
+				location={ locations.GYE }
+				invite={ messages.teaser }/>
 		</section>
 	)
 }

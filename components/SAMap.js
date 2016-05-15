@@ -1,15 +1,42 @@
 import React from 'react'
+import { defineMessages, FormattedMessage, FormattedDate } from 'react-intl'
+import DonateButton from './DonateButton'
+
+const messages = defineMessages({
+	when: {
+		id: 'announcement.when.header'
+	},
+	date: {
+		id: 'announcement.when.date'
+	},
+	time: {
+		id: 'announcement.when.time'
+	},
+	where: {
+		id: 'announcement.where.header'
+	},
+	venue: {
+		id: 'announcement.where.venue'
+	},
+	city: {
+		id: 'announcement.where.city'
+	}
+})
 
 const SAMap = () => (
 	<div className='map-container'>
 		<div className='info-container'>
-			<i>When</i>
-			<p>Saturday, July 23, 2016</p>
-			<p>Eight 'o' clock in the evening</p>
+			<i><FormattedMessage {...messages.when} /></i>
+			<p><FormattedMessage {...messages.date} /></p>
+			<p><FormattedMessage {...messages.time} /></p>
 			<br />
-			<i>Where</i>
-			<p><a href='http://www.parquehistorico.gob.ec/' target="_blank">Parque Histórico de Guayaquil</a></p>
-			<p>Guayaquil, Ecuador</p>
+			<i><FormattedMessage {...messages.where} /></i>
+			<p>
+				<a href='http://www.parquehistorico.gob.ec/' target="_blank">
+					<FormattedMessage {...messages.venue} />
+				</a>
+			</p>
+			<p><FormattedMessage {...messages.city} /></p>
 		</div>
 		<a href="http://ecuador.travel/" target="_blank">
 			<svg id="sa-map" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 254">

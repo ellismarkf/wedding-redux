@@ -5,17 +5,9 @@ var webpack = require('webpack')
 
 module.exports = {
 	entry: {
-		index: [
-			'webpack-hot-middleware/client?reload=true',
-			'./index.js'
-		],
-		thanks: [
-			'webpack-hot-middleware/client?reload=true',
-			'./thanks.js'
-		]
-	}
-,
-	devtool: 'eval-source-map',
+		index: ['./index.js'],
+		thanks: ['./thanks.js']
+	},
 	output: {
 		path: __dirname + '/dist',
 		filename: '[name].js'
@@ -54,14 +46,19 @@ module.exports = {
 			excludeChunks: ['index'],
 			inject: 'body'
 		}),
+		new ExtractTextPlugin("index.css"),
 		new CommonsChunkPlugin("commons.chunk.js"),
-		new ExtractTextPlugin("[name].css"),
 		new webpack.optimize.OccurenceOrderPlugin(),
-		new webpack.HotModuleReplacementPlugin(),
+		new webpack.optimize.DedupePlugin(),
+		new webpack.optimize.UglifyJsPlugin({
+		    compress: {
+		        warnings: false
+		    }
+		}),
 		new webpack.NoErrorsPlugin(),
 		new webpack.DefinePlugin({
-		  	__DEVELOPMENT__: true,
-		  	__DEVTOOLS__: true
+		  	__DEVELOPMENT___: false,
+		  	__DEVTOOLS__: false
 		})
 	]
 }
