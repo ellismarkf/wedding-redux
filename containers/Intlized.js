@@ -7,9 +7,6 @@ import { localeSwitch } from '../actions/locale'
 
 class Intlized extends Component {
 	componentDidMount() {
-		// if (window.location.protocol !== 'https:') {
-		// 	window.location.replace('https://www.lisyand.me')
-		// }
 	    const { dispatch } = this.props
 	    const locale = (navigator.language || navigator.userLanguage || navigator.languages[0] || navigator.browserLanguage).split('-')[0]
 	    dispatch(localeSwitch(locale))

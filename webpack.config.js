@@ -43,6 +43,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			title: "Lisy &amp; Mark are getting married!",
 			filename: "index.html",
+			favicon: './assets/favicon.png',
 			template: 'index-html.ejs',
 			excludeChunks: ['thanks'],
 			inject: 'body'
@@ -50,6 +51,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			title: "Lisy &amp; Mark say thank you!",
 			filename: "thanks.html",
+			favicon: './assests/favicon.png',
 			template: 'thanks-html.ejs',
 			excludeChunks: ['index'],
 			inject: 'body'

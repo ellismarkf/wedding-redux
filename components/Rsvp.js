@@ -30,8 +30,7 @@ const mapStateToProps = (state) => ({
 	hasRSVPd: state.rsvp.hasRSVPd,
 	animating: state.rsvp.animating,
 	isFetching: state.rsvp.isFetching,
-	errMsg: state.rsvp.errMsg,
-	locale: state.locale
+	errMsg: state.rsvp.errMsg
 })
 
 export default connect(mapStateToProps)(Rsvp)
