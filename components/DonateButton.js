@@ -7,7 +7,7 @@ class DonateButton extends Component {
 		return (
 			<div>
 				{locale === 'en' &&
-					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<form className='donateBtn' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 						<input type="hidden" name="cmd" value="_s-xclick" />
 						<input type="hidden" name="hosted_button_id" value="7FPSX4TPCMDNA" />
 						<input type="image" src="http://wowmarkandray.com/img/contribute-english.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
