@@ -51,7 +51,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			title: "Lisy &amp; Mark say thank you!",
 			filename: "thanks.html",
-			favicon: './assests/favicon.png',
+			favicon: './assets/favicon.png',
 			template: 'thanks-html.ejs',
 			excludeChunks: ['index'],
 			inject: 'body'
