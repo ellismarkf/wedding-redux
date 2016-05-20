@@ -27,7 +27,7 @@ export default {
 	'timeline.dates.summer2012': 'Summer 2012',
 	'timeline.dates.spring2013': 'Spring 2013',
 	'timeline.dates.summer2013': 'Summer 2013',
-	'timeline.major-entry.overview': "Three years ago, fate and inscrutable family connections brought Mark and Lisandra together for what amounted to a few hours over the course of a week. Their story unfolded across years and continents, and now they're getting married! This is their story.",
+	'timeline.major-entry.overview': "Almost four years ago, fate and inscrutable family connections brought Mark and Lisandra together for what amounted to a few hours over the course of a week. Their story unfolded across years and continents, and now they're getting married! This is their story.",
 	'timeline.major-entry.first-meeting': "A research student position at MD Anderson brought her to Houston, where she was staying with his best friend's family.  He went out for dinner and karaoke one night with his friends, and she was there.  Sparks flew, but there was one problem (technically two problems): they were both already in relationships. Romance would have to wait.",
 	'timeline.major-entry.leave-of-absence': "Summer ended and they went separate ways, but the chemistry had been undeniable, and strong enough to keep them from forgetting each other during the next year.",
 	'timeline.major-entry.first-date': "They decided on a weekend for him to visit, and he drove (yes, drove) to Monterrey from Austin, arriving several hours late.  That night they went to a carnival, and he waited so long to kiss her she thought he wasn't interested.  He definitely was.",
